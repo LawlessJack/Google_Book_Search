@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import { Col, Row, Container } from "../components/Grid";
-import Jumbotron from "../components/Jumbotron";
 import API from "../Utils/API";
-import SavedBooks from "../components/SavedBooks"
+import Jumbotron from "../components/Jumbotron";
+import { Container} from "../components/Grid";
+import SavedResult from "../components/SavedResult"
 
-class SavedBook extends Component {
+class SaveBook extends Component {
     state = {
         savedBooks: []
     };
@@ -28,11 +28,13 @@ class SavedBook extends Component {
             <Container fluid className="container">
                 <Jumbotron />
                 <Container>
-                    <SavedBooks savedBooks={this.state.savedBooks} handleDeleteButton={this.handleDeleteButton} />
+                    <SavedResult savedBooks={this.state.savedBooks} handleDeleteButton={this.handleDeleteButton} />
                 </Container>
             </Container>
         )
     }
 }
 
-export default SavedBook;
+
+
+export default SaveBook 

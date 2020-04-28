@@ -1,5 +1,4 @@
 import React from "react";
-
 import {Row, Col} from "../Grid"
 
 const SavedBooks = props => {
@@ -43,7 +42,7 @@ const SavedBooks = props => {
                                     <button className="deleteBook btn btn-danger" id={savedbook._id} onClick={() => props.handleDeleteButton(savedbook._id)}>
                                         Delete Book
                                     </button>
-                                    <a href={savedbook.link} target="_blank">
+                                    <a href={savedbook.link} target="_blank"  rel="noopener noreferrer">
                                         <button className="viewBook btn btn-success">
                                             View Book
                                         </button>
